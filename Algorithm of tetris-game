@@ -1,0 +1,63 @@
+# Tetris Game Algorithm
+1. **Import the necessary modules and classes:**
+   - `pygame` module for the game graphics and sound.
+   - `Colors` class for defining color constants.
+   - `Position` class for representing the positions of cells in the grid.
+   - `Block` class for defining the basic structure and behavior of Tetris blocks.
+   - Block subclasses (`LBlock`, `JBlock`, `IBlock`, `OBlock`, `SBlock`, `TBlock`, `ZBlock`) for defining specific block shapes.
+
+2. **Define the `Grid` class:**
+   - Initialize the grid with the specified number of rows and columns, and cell size.
+   - Create a grid as a 2D list with all cells initially empty.
+   - Define methods for interacting with the grid, such as:
+     - Printing the grid.
+     - Checking if a cell is inside the grid.
+     - Checking if a cell is empty.
+     - Checking if a row is full.
+     - Clearing a row.
+     - Moving rows down.
+     - Clearing full rows.
+     - Resetting the grid.
+   - Define a method for drawing the grid on the screen.
+
+3. **Define the `Game` class:**
+   - Initialize the game by creating an instance of the `Grid` class, a list of block types, and setting the initial block and next block.
+   - Define methods for:
+     - Updating the score.
+     - Getting a random block.
+     - Moving the current block left.
+     - Moving the current block right.
+     - Moving the current block down.
+     - Locking the current block in place.
+     - Resetting the game.
+     - Checking if a block fits in the grid.
+     - Rotating the current block.
+     - Checking if a block is inside the grid.
+     - Drawing the game on the screen.
+
+4. **Define the `Colors` class:**
+   - Define color constants for different cell colors.
+   - Define a class method to get the list of cell colors.
+
+5. **Define the `Block` class:**
+   - Initialize the block with a unique `id` and an empty dictionary for storing cell positions.
+   - Define methods for:
+     - Moving the block.
+     - Getting the positions of cells.
+     - Rotating the block.
+     - Undoing rotation.
+     - Drawing the block on the screen.
+
+6. **Define the subclasses of `Block` for specific block shapes (e.g., `LBlock`, `JBlock`, `IBlock`, `OBlock`, `SBlock`, `TBlock`, `ZBlock`):**
+   - Initialize each subclass with the specific cell positions for the block shape.
+   - Define the move offsets to position the block correctly.
+   - Override the methods as necessary for unique block behavior.
+
+7. **Create an instance of the `Game` class to start the game.**
+
+8. **Run the game loop:**
+   - Handle user input for moving the block, rotating the block, and quitting the game.
+   - Update the game state by moving the current block down and checking for collisions.
+   - Draw the game on the screen.
+
+9. **When the game loop exits (e.g., the user quits the game), clean up resources and exit.**
